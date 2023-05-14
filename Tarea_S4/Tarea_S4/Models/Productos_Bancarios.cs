@@ -9,9 +9,17 @@ namespace Tarea_S4.Models
     public class Productos_Bancarios
     {
 
-        public double saldo_disponible {  get; set; }
-        public double fecha_apertura { get; set; }
+        public double saldo_disponible { get; set; }
+        public DateTime fecha_apertura { get; set; }
         public double numero_cuenta { get; set; }
+        public double cuenta { get; set; } 
+        
+        public virtual void cuentaNueva(){}
+
+        public override string ToString()
+        {
+            return $" Cuenta nueva creada el: {fecha_apertura} numero de cuenta: {numero_cuenta} y su saldo disponible es: {saldo_disponible}"; 
+        }
 
     }
 }
